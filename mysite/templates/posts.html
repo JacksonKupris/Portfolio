@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Kupris</title>
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link href="{% static 'css/default.css' %} " rel="stylesheet">
+        <link id="theme-style" rel="stylesheet" href="">
+</head>
+<body>
+    {% block content %}
+        {% include 'navbar.html' %}
+        <section class="s1">
+        <section class="main-container" style=" padding-top: 10px;">
+            <h1>Posts</h1>
+        
+            <div class="post-wrapper" >
+
+                {% for post in posts %}
+
+            <div>
+                <div class="post" >
+                    <img class="thumbnail" src="{% static 'images/placeholder.jpg' %}" alt="">
+                    <div class="post-preview">
+                        <h6 class="post-title">{{post.headline}}</h6>
+                        <p class="post-intro">{{post.sub_headline}}</p>
+                        <a href="{% url 'post' %}">Read More</a>
+
+                        <hr>
+                        {% for tag in post.tags.all %}
+                            <span class='tag'> {{tag}}</span>
+                        {% endfor %}
+
+                        <hr>
+
+                    </div>
+                    
+
+                </div>
+            </div>
+
+            {% empty %}
+
+                <h3>No posts to be found...</h3>
+
+            {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    {% endblock content %} 
+
+    <script type='text/Javascript'> 
+    let static = " {% static 'css' %}"
+    </script>
+
+
+    <script src="{% static 'js/color.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'main.html' %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Kupris</title>
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link href="{% static 'css/default.css' %} " rel="stylesheet">
+        <link id="theme-style" rel="stylesheet" href="">
+</head>
+<body>
+    {% block content %}
+    {% include 'navbar.html' %}
+    <section class="s1">
+        <div class='main-container' >
+            <h1>Post Title</h1>
+
+        <img id="profile_picture" src="{% static 'images/ProfilePicture.jpg' %}" alt="">
+            
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae possimus sunt totam voluptatem, doloribus aliquid. Aliquam laborum soluta fugiat amet molestias delectus nihil assumenda! Temporibus culpa libero accusamus quae?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae possimus sunt totam voluptatem, doloribus aliquid. Aliquam laborum soluta fugiat amet molestias delectus nihil assumenda! Temporibus culpa libero accusamus quae?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae possimus sunt totam voluptatem, doloribus aliquid. Aliquam laborum soluta fugiat amet molestias delectus nihil assumenda! Temporibus culpa libero accusamus quae?
+
+            </p>
+        </div>
+
+
+    </section>
+    {% endblock content %} 
+
+    <script type='text/Javascript'> 
+        let static = " {% static 'css' %}"
+    </script>
+    
+    
+    <script src="{% static 'js/color.js' %}"></script>
+</body>
+</html>
