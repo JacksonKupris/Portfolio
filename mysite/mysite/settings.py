@@ -41,8 +41,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'ckeditor',
+    'ckeditor_uploader',
+
     'mysite'
 ]
+
+CRISPY_TEMPLATE_PACK ='bootstrap4'
+
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -136,3 +143,23 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'jacksonkupris@gmail.com'
+EMAIL_HOST_PASSWORD = 'lmmpfuwybwmdzbpa'
+
+
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+
+CKEDITOR_CONFIGS = {
+    'default':{
+        'toolbar':'full',
+        'height':300,
+        'width': '100%',
+    }
+}

@@ -121,40 +121,21 @@
         <div class="main-container">
             <h3 style="text-align: center;" id="projects">Some of my past projects</h3>
             <div class="post-wrapper" >
+                {% for post in posts %}
             <div>
                 <div class="post" >
-                    <img class="thumbnail" src="{% static 'images/placeholder.jpg' %}" alt="">
+                    <img class="thumbnail" src="{{post.thumbnail.url}}" alt="">
                     <div class="post-preview">
-                        <h6 class="post-title">Post Title</h6>
-                        <p class="post-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. A non doloribus adipisci maiores magni repudiandae aperiam eveniet autem tempore, eius nulla totam quae laboriosam ex porro ipsum corporis exercitationem ratione!</p>
-                        <a href="{%url 'post' %}">Read More</a>
+                        <h6 class="post-title">{{post.headline}}</h6>
+                        <p class="post-intro">{{post.sub_headline}}</p>
+                        <a href="{%url 'post' post.slug %}">Read More</a>
+
                     </div>
                     
-
                 </div>
+
             </div>
-
-            <div>
-                <div class="post">
-                    <img class="thumbnail" src="{% static 'images/placeholder.jpg' %}" alt="">
-                    <div class="post-preview">
-                        <h6 class="post-title">Post Title</h6>
-                        <p class="post-intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae saepe eveniet voluptatibus iste, error nam ad pariatur eius suscipit nisi temporibus harum sequi iure enim incidunt mollitia dolorum doloremque provident?</p>
-                    <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div>
-                <div class="post">
-                    <img class="thumbnail" src="{% static 'images/placeholder.jpg' %}" alt="">
-                    <div class="post-preview">
-                        <h6 class="post-title">Post Title</h6>
-                        <p class="post-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, eum sunt. Ut optio quasi blanditiis quae magnam, voluptate quas eum adipisci, ullam animi natus dolore itaque architecto fugit dignissimos explicabo?</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
+            {% endfor %}
 
             </div>
 
@@ -172,8 +153,8 @@
         <div class="main-container">
             <h3 style="text-align: center;" >Contact Me</h3>
 
-            <form id="contact-form" action="">
-
+            <form id="contact-form" action="{% url 'send_email' %}" method='POST'>
+                {% csrf_token %}
                 <label for="name">Name</label>
                 <input  type="text" class="input-field" name="name">
 

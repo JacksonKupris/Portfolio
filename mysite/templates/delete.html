@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link href="{% static 'css/default.css' %} " rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link id="theme-style" rel="stylesheet" href="">
+
+    <div class='main-container'>
+        <form method='POST' action="">.
+            {% csrf_token %}
+            <p>
+                Are you sure you wish to delete {{item}}
+            </p>
+        <input class="btn btn-danger" type="submit" value="Confirm">
+        </form>
+
+
+
+    </div>
+
+
+
+{% endblock content %}

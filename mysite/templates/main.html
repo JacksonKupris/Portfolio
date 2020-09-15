@@ -6,16 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jackson Kupris</title>
-        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Kupris</title>
+        <style type="text/css">
+        img{max-width: 100%;
+        object-fit: cover;}
+
+        </style>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@500&family=Russo+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
         <link href="{% static 'css/default.css' %} " rel="stylesheet">
         <link id="theme-style" rel="stylesheet" href="">
 </head>
 <body>
+    {% include 'navbar.html' %}
+
     {% block content %}
-        {% include 'navbar.html' %}
         POST PLACEHOLDER
     {% endblock content %} 
 
