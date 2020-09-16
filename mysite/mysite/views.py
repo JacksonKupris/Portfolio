@@ -118,5 +118,6 @@ def sendEmail(request):
         )
         
         email.fail_silently = False
+        print(email)
         email.send()
     return render(request, 'email_sent.html')
