@@ -106,8 +106,6 @@ def sendEmail(request):
             'name':request.POST['name'],
             'email':request.POST['email'],
             'message':request.POST['message'],
-            'name':request.POST['name'],
-
         }
         )
 
