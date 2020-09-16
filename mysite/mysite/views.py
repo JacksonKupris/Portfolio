@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.template.loader import render_to_string
-
+import os
 from .forms import PostForm
 
 from .models import Post
@@ -113,7 +113,7 @@ def sendEmail(request):
             request.POST['subject'],
             template,
             settings.EMAIL_HOST_USER,
-            ['jacksonkupris@gmail.com']
+            [os.environ.get('EMAIL_HOST_USER')]
 
         )
         
