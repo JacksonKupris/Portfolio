@@ -1,1 +1,1 @@
-web gunicorn jacksonportfolio.wsgi
+web gunicorn JacksonPortfolio.wsgi
