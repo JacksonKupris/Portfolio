@@ -29,7 +29,7 @@
 
     <div class="left-column">
         <img id="profile_picture" src="{% static 'images/ProfilePicture.jpg' %}" alt="">
-        <h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+        <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
     <div id="theme-options-wrapper">
         <div data-mode="light" id="light-mode" class="theme-dot"></div>
         <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
@@ -60,9 +60,9 @@
         <br>
         <div class="social-links">
             <a target="_blank" href="https://www.linkedin.com/in/jacksonkupris/" class="fa fa-linkedin"></a>
-            <a target="_blank" href="#" class="fa fa-github"></a>
-            <a target="_blank" href="#" class="fa fa-facebook"></a>
-            <a target="_blank" href="#" class="fa fa-twitter"></a>
+            <a target="_blank" href="https://github.com/JacksonKupris/" class="fa fa-github"></a>
+            {% comment %} <a target="_blank" href="#" class="fa fa-facebook"></a> {% endcomment %}
+            {% comment %} <a target="_blank" href="#" class="fa fa-twitter"></a> {% endcomment %}
         </div>
     </div>
 </div>
@@ -79,8 +79,9 @@
                 <div class="about-me" id="about">
                     <h4>More About Me</h4>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel accusamus culpa, odio id qui ut dignissimos aperiam eaque? Nulla porro voluptatem reiciendis eveniet ipsam vitae odio maiores commodi architecto at.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, consectetur eius aut saepe odit dolorem officia blanditiis ipsam necessitatibus neque eaque totam, delectus sequi ipsum nam dignissimos? Quam, eum. Libero.</p>
+                    <p>I began by fixing basic issues within the technology field, where I found that I wanted to expand my knowledge and learn something new everyday. 
+                    This led me to begin learning programming of many different languages. I have developed many proprietary programs and webpages for the company I was working for before the 2020 COVID-19 pandemic forced the company to go out of business.
+                    I would love to be able to continue to broaden my horizons within the field.</p>
 
                 <hr>
 
@@ -116,7 +117,10 @@
 
 
 
-    <section class="s1">
+
+{% comment %} Un-Comment to show past projects once AW3 is figured out {% endcomment %}
+
+    {% comment %} <section class="s1">
         <div class="main-container">
             <h3 style="text-align: center;" id="projects">Some of my past projects</h3>
             <div class="post-wrapper" >
@@ -146,7 +150,9 @@
 
         </div>
 
-    </section>
+    </section> {% endcomment %}
+
+{% comment %} Un-Comment to show past projects once AW3 is figured out {% endcomment %}
 
     <section class="s2">
         <div class="main-container">
